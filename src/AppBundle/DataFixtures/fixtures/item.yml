@@ -1,0 +1,14 @@
+AppBundle\Entity\Item:
+  item_open_0:
+    text: 'Do something'
+    status: 'open'
+  item_open_1:
+    text: 'Do something else'
+    status: 'open'
+  item_open_2:
+    text: 'Do more stuff'
+    status: 'open'
+
+  item_close_0:
+    text: 'Do that again'
+    status: 'close'

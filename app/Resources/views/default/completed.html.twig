@@ -1,0 +1,9 @@
+{% extends 'default/index.html.twig' %}
+
+{% block navbar %}
+    <li><a href="{{ path('app') }}">All</a></li>
+    <li><a href="{{ path('activeList') }}">Active</a></li>
+    <li class="uk-active"><a href="{{ path('completedList') }}">Completed</a></li>
+{% endblock %}
+
+{% block form %}{% endblock %}

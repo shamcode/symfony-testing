@@ -2,12 +2,22 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}{% endblock %}</title>
+        <style>
+            #wrapper { background: #FFF; margin: 1em auto; max-width: 800px; width: 95%; }
+            @media (min-width: 768px) {
+                #wrapper { width: 80%; margin: 2em auto; }
+            }
+        </style>
         {% block stylesheets %}{% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.26.3/css/uikit.min.css" />
     </head>
     <body>
         {% block body %}{% endblock %}
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-rc1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.26.3/js/uikit.min.js"></script>
         {% block javascripts %}{% endblock %}
     </body>
 </html>

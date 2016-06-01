@@ -1,0 +1,12 @@
+AppBundle\Entity\Item:
+  type: entity
+  table: item
+  repositoryClass: AppBundle\Entity\Repository\ItemRepository
+  id:
+    id: { type: integer, options: { unsigned: true }, generator: { strategy: AUTO } }
+  fields:
+    status: string(32)
+    text: text
+    created_at: { type: datetime } 
+  lifecycleCallbacks:
+    prePersist: [ setCreatedAt ]
