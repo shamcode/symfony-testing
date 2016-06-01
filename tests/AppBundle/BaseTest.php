@@ -12,22 +12,6 @@ abstract class BaseTest extends WebTestCase
     /** @var \Doctrine\ORM\EntityManager */
     protected $em;
 
-    /**
-     * @beforeClass
-     */
-    public static function setUpTestClass()
-    {
-        self::bootKernel();
-        $container = static::$kernel->getContainer();
-        $em = $container->get('doctrine')->getManager();
-
-        $loader = new FixturesLoader();
-        $loader->loadFromFile('src/AppBundle/DataFixtures/ORM/LoadItemFixturesData.php');
-        $purger = new ORMPurger($em);
-        $executor = new ORMExecutor($em, $purger);
-        $executor->execute($loader->getFixtures());
-    }
-
     protected function setUp()
     {
         self::bootKernel();
