@@ -7,6 +7,6 @@ AppBundle\Entity\Item:
   fields:
     status: string(32)
     text: text
-    created_at: { type: datetime } 
+    created_at: { type: datetime }
   lifecycleCallbacks:
     prePersist: [ setCreatedAt ]
